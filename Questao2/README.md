@@ -1,6 +1,6 @@
 # Questao 2 - Senha 
 
-Algoritmo feito em Java que faz a leitura de uma senha com entrada do tipo `string` e verifica se a senha está de acordo com as regras abaixo:
+Algoritmo em Java que faz a leitura de uma senha com entrada do tipo `string` e verifica se a senha está de acordo com as regras abaixo:
 
 
 **Ter no mínimo 6 caracteres** - Verificação feita no método `isSenhaValida()`
