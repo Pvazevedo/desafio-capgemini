@@ -2,6 +2,10 @@ package cadastro;
 
 import java.util.Scanner;
 
+/**Classe com algoritmo que veriffica se a senha está cumprindo a regra de validacao .
+* @author Paulo Victor
+* @version 1.0
+*/
 public class Cadastro {
 
 	public static final int LENGHT_SENHA = 6;
@@ -25,8 +29,13 @@ public class Cadastro {
 			}
 		}
 	}
-
-	private boolean isSenhaValida(String password) {
+	
+	
+	 /**Método para verificacao de senha 
+	 * @param senha - senha inserida pelo usuário
+	 * @return boolean - Valor do resultado da verificacao de todos os quesitos de validacao da senha
+	 */
+	private boolean isSenhaValida(String senha) {
 		
 		boolean temSeis = false;
 		boolean temNumero = false;
@@ -36,11 +45,11 @@ public class Cadastro {
 		int tamanhoSenha = 0;
 		
 
-		if (password.length() >= LENGHT_SENHA) {
+		if (senha.length() >= LENGHT_SENHA) {
             temSeis = true;
 
-			for (int i = 0; i < password.length(); i++) {
-				char ch = password.charAt(i);
+			for (int i = 0; i < senha.length(); i++) {
+				char ch = senha.charAt(i);
 				
                 if(!temNumero)
 				temNumero =isNumero(ch);
@@ -55,7 +64,7 @@ public class Cadastro {
                 temMenor = isMinusculo(ch);
 			}
 		}else {
-			tamanhoSenha = LENGHT_SENHA - password.length() ;
+			tamanhoSenha = LENGHT_SENHA - senha.length() ;
 		}
 		if (!temSeis) {
 			System.out.println("Faltam " + tamanhoSenha + " caracteres para senha segura.");
@@ -75,24 +84,39 @@ public class Cadastro {
 		return (temSeis && temNumero && temMaior && temMenor && temCaracterEspecial);
 	}
 
-	// Verifica se tem letra maíscula
+	/**Método que verifica se possui pelo menos uma letra maiúscula na senha
+	 * @param ch - caracter que será verificado
+	 * @return boolean - Valor do resultado da verificacao
+	 */	
 	private boolean isMaiusculo(char ch) {
 		return (ch >= 'A' && ch <= 'Z');
 	}
 
-	// Verifica se tem letra minúscula
+	/**Método que verifica se possui pelo menos uma letra minuscula na senha
+	 * @param ch - caracter que será verificado
+	 * @return boolean - Valor do resultado da verificacao
+	 */
 	private boolean isMinusculo(char ch) {
 		return (ch >= 'a' && ch <= 'z');
 	}
 
-	// Verifica se tem número
-	private boolean isNumero(char ch) {
+	/**Método que verifica se possui pelo menos um dígito na senha
+	 * @param ch - caracter que será verificado
+	 * @return boolean - Valor do resultado da verificacao
+	 */	private boolean isNumero(char ch) {
 		return (ch >= '0' && ch <= '9');
 	}
 
-	// Verifica se tem carater especial
-	private boolean isCaracterEspecial(char ch) {
-		return (ch == '!' || ch == '@' || ch == '#' || ch == '$' || ch == '%' || ch == '^' || ch == '&' || ch == '*'
-				|| ch == '(' || ch == ')' || ch == '-' || ch == '_' || ch == '+');
+	 /**Método que verifica se possui pelo menos um caracter especial
+		 * @param ch - caracter que será verificado
+		 * @return boolean - Valor do resultado da verificacao
+		 */
+	 private boolean isCaracterEspecial(char ch) {
+		return (ch == '!' || ch == '@' ||
+				ch == '#' || ch == '$' ||
+				ch == '%' || ch == '^' ||
+				ch == '&' || ch == '*' ||
+				ch == '(' || ch == ')' || 
+				ch == '-' || ch == '_' || ch == '+');
 	}
 }
