@@ -1,36 +1,36 @@
 # Questao 2 - Senha 
 
-Algoritmo feito em Java que faz a leitura de uma senha com entrada do tipo 'string' e verifica se a senha está de acordo com as regras .
+Algoritmo feito em Java que faz a leitura de uma senha com entrada do tipo `string` e verifica se a senha estÃ¡ de acordo com as regras abaixo:
 
 
-Ter no mínimo 6 caracteres - Verificacao feita no método isSenhaValida()
+**Ter no mÃ­nimo 6 caracteres** - VerificaÃ§Ã£o feita no mÃ©todo `isSenhaValida()`
+ 
+**Ter no mÃ­nimo 1 dÃ­gito** - VerificaÃ§Ã£o feita no mÃ©todo `isNumero()`
 
-Ter no mínimo 1 dígito - Verificacao feita no método isNumero()
+**Ter no mÃ­nimo 1 letra  maÃ­scula** - VerificaÃ§Ã£o feita no mÃ©todo `isMaiusculo()`
 
-Ter no mínimo 1 letra  maíscula - Verificacao feita no método isMaiusculo()
+**Ter no mÃ­nimo 1 letra em minÃºscula** - VerificaÃ§Ã£o feita no mÃ©todo `isMinusculo()`
 
-Ter no mínimo 1 letra em minúscula - Verificacao feita no método isMinusculo()
-
-Ter no mínimo 1 caractere especial - Verificacao feita no método isCaracterEspecial()
+**Ter no mÃ­nimo 1 caractere especial** - VerificaÃ§Ã£o feita no mÃ©todo `isCaracterEspecial()`
 
               
 
-###Exemplo: 
+### Exemplo: 
 
-Valor inserido :  dd
+_Input:_  `dd`
 
-output
-
+_Output:_
+```
 Faltam 4 caracteres para senha segura.
 
-A senha precisa ter no mínimo 1 dígito.
+A senha precisa ter no mÃ­nimo 1 dÃ­gito.
 
-A senha precisa ter no mínimo 1 letra em maíscula.
+A senha precisa ter no mÃ­nimo 1 letra em maiÃºsculo.
 
-A senha precisa ter no mínimo 1 letra em minúscula.
+A senha precisa ter no mÃ­nimo 1 letra em minÃºsculo.
 
-A senha precisa ter no mínimo 1 caractere especial.
+A senha precisa ter no mÃ­nimo 1 caractere especial.
 
-Não é uma senha segura
+NÃ£o Ã© uma senha segura.
 
-A execuÃ§Ã£o do algoritmo Ã© com input de dados via console,
+```
