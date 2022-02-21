@@ -2,7 +2,7 @@ package cadastro;
 
 import java.util.Scanner;
 
-/**Classe com algoritmo que veriffica se a senha está cumprindo a regra de validacao .
+/**Classe com algoritmo que verifica se a senha está cumprindo a regra de validação para uma senha segura.
 * @author Paulo Victor
 * @version 1.0
 */
@@ -23,17 +23,17 @@ public class Cadastro {
 			String str = input.nextLine();
 
 			if (isSenhaValida(str)) {
-				System.out.println("Senha segura");
+				System.out.println("Senha segura.");
 			} else {
-				System.out.println("Não é uma senha segura");
+				System.out.println("Não é uma senha segura.");
 			}
 		}
 	}
 	
 	
-	 /**Método para verificacao de senha 
+	 /**Método para verificação de senha 
 	 * @param senha - senha inserida pelo usuário
-	 * @return boolean - Valor do resultado da verificacao de todos os quesitos de validacao da senha
+	 * @return boolean - Valor do resultado da verificação de todos os quesitos de validação da senha
 	 */
 	private boolean isSenhaValida(String senha) {
 		
@@ -73,10 +73,10 @@ public class Cadastro {
 		System.out.println("A senha precisa ter no mínimo 1 dígito.");
 		}
 		if (!temMaior) {
-			System.out.println("A senha precisa ter no mínimo 1 letra em maíscula.");
+			System.out.println("A senha precisa ter no mínimo 1 letra em maiúsculo.");
 		}
 		if (!temMenor) {
-			System.out.println("A senha precisa ter no mínimo 1 letra em minúscula.");
+			System.out.println("A senha precisa ter no mínimo 1 letra em minúsculo.");
 		}
 		if (!temCaracterEspecial) {
 			System.out.println("A senha precisa ter no mínimo 1 caractere especial.");
@@ -86,15 +86,15 @@ public class Cadastro {
 
 	/**Método que verifica se possui pelo menos uma letra maiúscula na senha
 	 * @param ch - caracter que será verificado
-	 * @return boolean - Valor do resultado da verificacao
+	 * @return boolean - Valor do resultado da verificação
 	 */	
 	private boolean isMaiusculo(char ch) {
 		return (ch >= 'A' && ch <= 'Z');
 	}
 
-	/**Método que verifica se possui pelo menos uma letra minuscula na senha
+	/**Método que verifica se possui pelo menos uma letra minúscula na senha
 	 * @param ch - caracter que será verificado
-	 * @return boolean - Valor do resultado da verificacao
+	 * @return boolean - Valor do resultado da verificação
 	 */
 	private boolean isMinusculo(char ch) {
 		return (ch >= 'a' && ch <= 'z');
@@ -102,14 +102,14 @@ public class Cadastro {
 
 	/**Método que verifica se possui pelo menos um dígito na senha
 	 * @param ch - caracter que será verificado
-	 * @return boolean - Valor do resultado da verificacao
+	 * @return boolean - Valor do resultado da verificação
 	 */	private boolean isNumero(char ch) {
 		return (ch >= '0' && ch <= '9');
 	}
 
 	 /**Método que verifica se possui pelo menos um caracter especial
 		 * @param ch - caracter que será verificado
-		 * @return boolean - Valor do resultado da verificacao
+		 * @return boolean - Valor do resultado da verificação
 		 */
 	 private boolean isCaracterEspecial(char ch) {
 		return (ch == '!' || ch == '@' ||
