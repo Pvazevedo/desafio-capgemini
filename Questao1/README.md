@@ -1,15 +1,18 @@
-#Questão 1 - Escada 
+# Questão 1 - Escada 
 
-Algoritmo feito em Java que faz a leitura de um entrada do tipo int e imprime uma linha de caracteres "*" de acordo com o valor inserido.
+Algoritmo feita em Java, fazendo a leitura de uma entrada do tipo `int` via console e imprimindo uma linha de caracteres `*` crescente, iniciando com 1 e indo até valor `int` inserido na entrada.
 
-###Exemplo: 
 
-Valor inserido : 5
-Impressão :
-	*
+### Exemplo: 
+
+_input:_ 5
+
+_output:_
+
+```
+    *
    **
   ***
  ****
 *****
-
-A execução do algoritmo é com input de dados via console,
+```
